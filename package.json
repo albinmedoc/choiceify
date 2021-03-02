@@ -1,6 +1,6 @@
 {
-  "name": "TODO",
-  "description": "TODO",
+  "name": "choiceify",
+  "description": "All persons select their choices, webapp shows which choices all persons were selecting.",
   "version": "0.0.1",
   "scripts": {
     "dev": "sapper dev",
@@ -12,7 +12,9 @@
   "dependencies": {
     "compression": "^1.7.1",
     "polka": "next",
-    "sirv": "^1.0.0"
+    "sirv": "^1.0.0",
+    "socket.io": "^3.1.2",
+    "socket.io-client": "^3.1.2"
   },
   "devDependencies": {
     "@babel/core": "^7.0.0",
