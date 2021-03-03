@@ -1,21 +1,22 @@
-class Games {
-    games = {};
+import type Game from './game';
 
-    addGame(game_data: any){
-        const pin = (Math.floor(Math.random()*90000) + 10000).toString();
-        this.games[pin] = game_data;
-        return pin;
+class Games {
+    private games: Game[] = [];
+
+    addGame(game: Game) {
+        this.games.push(game);
     }
 
     removeGame(pin: string) {
-        delete this.games[pin];
+        this.games = this.games.filter((game) => game.getPin() !== pin);
     }
 
     getGame(pin: string) {
-        if(!(pin in this.games))
-            return false;
-        return this.games[pin];
+        return this.games.filter((game) => game.getPin() === pin)[0]
     }
 }
 
-export default Games;
+const instance = new Games();
+Object.freeze(instance);
+
+export default instance;
