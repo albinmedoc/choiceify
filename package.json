@@ -1,6 +1,6 @@
 {
   "name": "choiceify",
-  "description": "All persons select their choices, webapp shows which choices all persons were selecting.",
+  "description": "Come up with the best/funniest sentence and win the competition!",
   "version": "0.0.1",
   "scripts": {
     "dev": "sapper dev",
